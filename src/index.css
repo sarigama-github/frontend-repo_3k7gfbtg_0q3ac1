@@ -4,43 +4,31 @@
 
 @layer base {
   :root {
-    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-geist: 'Geist', system-ui, sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
-    --font-mona: 'Mona Sans', system-ui, sans-serif;
-    --font-ibm-plex: 'IBM Plex Sans', system-ui, sans-serif;
-    --font-manrope: 'Manrope', system-ui, sans-serif;
+    --font-body: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font-head: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --accent: #0047FF;
   }
 
   html {
-    font-family: var(--font-sans);
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: var(--font-body);
+    color: #000000;
+    background: #FFFFFF;
+    font-feature-settings: "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  body {
-    @apply antialiased;
-  }
+  body { @apply antialiased; }
+
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); }
+
+  a { text-underline-offset: 2px; }
+  a:hover { color: var(--accent); }
 }
 
-/* Custom utility classes for shadcn/ui patterns */
+/* Subtle utilities for dividers and rhythm */
 @layer utilities {
-  .animate-in {
-    animation-name: animateIn;
-    animation-duration: 350ms;
-    --tw-enter-opacity: initial;
-    --tw-enter-scale: initial;
-    --tw-enter-rotate: initial;
-    --tw-enter-translate-x: initial;
-    --tw-enter-translate-y: initial;
-  }
-
-  .animate-out {
-    animation-name: animateOut;
-    animation-duration: 350ms;
-    --tw-exit-opacity: initial;
-    --tw-exit-scale: initial;
-    --tw-exit-rotate: initial;
-    --tw-exit-translate-x: initial;
-    --tw-exit-translate-y: initial;
-  }
+  .hairline { height: 1px; background: rgba(0,0,0,0.12); }
+  .section { @apply py-24; }
+  .container-narrow { @apply max-w-3xl mx-auto px-6; }
 }
