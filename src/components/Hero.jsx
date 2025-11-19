@@ -19,6 +19,14 @@ function Hero() {
         </div>
       </div>
 
+      {/* Decorative corner accents for visual energy */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-6 top-6 h-6 w-6 border-l border-t border-black/30" />
+        <div className="absolute right-6 top-6 h-6 w-6 border-r border-t border-black/30" />
+        <div className="absolute left-6 bottom-6 h-6 w-6 border-l border-b border-black/30" />
+        <div className="absolute right-6 bottom-6 h-6 w-6 border-r border-b border-black/30" />
+      </div>
+
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-black/40 to-transparent" />
 
       <style>{`
