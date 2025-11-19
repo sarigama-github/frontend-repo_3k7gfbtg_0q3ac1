@@ -12,13 +12,15 @@ function App() {
     <div className="bg-white text-black">
       <Visuals />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Manifesto />
         <Services />
         <Insights />
       </main>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   )
 }

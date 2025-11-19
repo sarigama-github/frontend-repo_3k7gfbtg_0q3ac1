@@ -10,7 +10,7 @@ function Footer() {
           </h3>
         </div>
         <div className="flex items-center justify-center mb-16">
-          <a href="#" className="font-mono text-sm bg-white text-black px-6 py-3 border border-white rounded-full hover:text-[#0047FF] transition-colors">
+          <a href="#" className="spotlight-pulse font-mono text-sm bg-white text-black px-6 py-3 border border-white rounded-full hover:text-[#0047FF] transition-colors">
             Book Consultation
           </a>
         </div>

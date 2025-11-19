@@ -12,7 +12,7 @@ function Hero() {
           Brands, Strategy, Design and Technology.
         </p>
         <div className="flex items-center justify-center opacity-0 animate-[fadeIn_1.4s_ease_1s_forwards]">
-          <a href="#about" className="group inline-flex items-center gap-2 font-mono text-sm border border-black px-4 py-2 rounded-full hover:border-[#0047FF] transition-colors">
+          <a href="#about" className="spotlight-pulse group inline-flex items-center gap-2 font-mono text-sm border border-black px-4 py-2 rounded-full hover:border-[#0047FF] transition-colors">
             <span className="group-hover:text-[#0047FF] transition-colors">Scroll Down</span>
             <ChevronDown className="h-4 w-4 transition-colors group-hover:text-[#0047FF]" />
           </a>

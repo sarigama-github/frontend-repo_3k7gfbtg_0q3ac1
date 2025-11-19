@@ -32,3 +32,31 @@
   .section { @apply py-24; }
   .container-narrow { @apply max-w-3xl mx-auto px-6; }
 }
+
+/* Components */
+@layer components {
+  /* Electric Blue spotlight pulse behind CTAs */
+  @keyframes spotlightPulse {
+    0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.35; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.55; }
+    100% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.35; }
+  }
+
+  .spotlight-pulse { position: relative; isolation: isolate; }
+  .spotlight-pulse::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200%;
+    height: 260%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: radial-gradient(circle at center, rgba(0,71,255,0.28), rgba(0,71,255,0.14) 45%, rgba(0,71,255,0.0) 70%);
+    filter: blur(18px);
+    border-radius: 9999px;
+    z-index: -1;
+    pointer-events: none;
+    animation: spotlightPulse 3.4s ease-in-out infinite;
+  }
+  .spotlight-pulse:hover::before { filter: blur(14px); opacity: 0.6; }
+}
